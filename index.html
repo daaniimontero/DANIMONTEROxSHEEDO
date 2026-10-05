@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daniel Montero para Sheedo</title>
+<meta name="description" content="Daniel Montero: candidatura para Marketing &amp; Content Specialist (Junior) en Sheedo Studio.">
+<style>body{margin:0}img{max-width:100%}</style>
+</head>
+<body>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Urbanist:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: una carta sobre papel. Rail de etiquetas a la izquierda, texto a la derecha;
+   dos hojas azules lisas abren y cierran la página. */
+:root {
+  --paper: #F7F3F2;        /* crema Sheedo */
+  --ink: #58271E;          /* marrón Sheedo */
+  --ink-soft: #7C574F;     /* marrón suavizado para texto secundario */
+  --line: #E2D6D2;         /* filetes sobre crema */
+  --blue: #5787BE;         /* azul Sheedo */
+  --blue-deep: #3C68A0;    /* azul para texto pequeño sobre crema */
+  --blue-pale: #A9C5E6;    /* azul claro sobre marino */
+  --navy: #081F3A;         /* marino Sheedo */
+  --navy-line: #24405F;
+  --amber: #F39C12;        /* naranja de llamada */
+  --white: #FFFFFF;
+
+  --display: "Fraunces", "Recoleta", Georgia, "Times New Roman", serif;
+  --body: "Urbanist", "Gilroy", "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif;
+
+  --gutter: clamp(16px, 5vw, 44px);
+  --section-gap: clamp(64px, 9vw, 120px);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+p, h1, h2, h3, ol, ul, dl, dd, figure { margin: 0; }
+ol, ul { padding: 0; list-style: none; }
+a { color: var(--blue-deep); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; }
+
+.wrap { max-width: 1120px; margin-inline: auto; padding-inline: var(--gutter); }
+
+/* ---------- Cabecera ---------- */
+.topbar {
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 24px;
+  padding-block: 22px;
+  font-size: 14px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+}
+.topbar span:last-child { color: var(--ink-soft); }
+
+/* ---------- Hoja azul ---------- */
+.sheet {
+  position: relative; overflow: hidden;
+  background: var(--blue); color: var(--white);
+  border-radius: clamp(20px, 3vw, 34px);
+}
+.sheet-inner { position: relative; padding: clamp(36px, 7vw, 92px) clamp(24px, 6vw, 80px); }
+
+.hero h1 {
+  font-family: var(--display); font-weight: 600;
+  font-size: clamp(46px, 10.5vw, 132px); line-height: .96; letter-spacing: -.02em;
+  text-wrap: balance;
+}
+.hero h1 span, .close h2 span { display: block; }
+.sprout { position: absolute; right: clamp(20px, 5vw, 64px); bottom: -2px; width: clamp(54px, 9vw, 104px); height: auto; }
+
+.hero-below {
+  display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: 28px clamp(32px, 6vw, 88px); align-items: start;
+  padding-top: clamp(28px, 4vw, 48px);
+}
+.lead { font-size: clamp(20px, 2.3vw, 26px); line-height: 1.42; font-weight: 500; max-width: 34ch; }
+.facts { display: grid; gap: 0; font-size: 16px; }
+.facts li { display: flex; justify-content: space-between; gap: 16px; padding-block: 11px; border-top: 1px solid var(--line); }
+.facts li:last-child { border-bottom: 1px solid var(--line); }
+.facts span:first-child { color: var(--ink-soft); }
+.facts span:last-child { font-weight: 700; text-align: right; }
+
+/* ---------- Secciones ---------- */
+main { display: flex; flex-direction: column; gap: var(--section-gap); padding-bottom: var(--section-gap); }
+
+.rail { display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 20px clamp(24px, 4vw, 56px); align-items: start; }
+.label {
+  font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--blue-deep); padding-top: 12px; border-top: 2px solid var(--blue);
+}
+.body { display: grid; gap: 22px; min-width: 0; }
+h2 {
+  font-family: var(--display); font-weight: 600;
+  font-size: clamp(30px, 4.4vw, 50px); line-height: 1.06; letter-spacing: -.015em;
+  text-wrap: balance; max-width: 20ch;
+}
+.prose { display: grid; gap: 18px; max-width: 62ch; }
+.note { color: var(--ink-soft); max-width: 62ch; }
+
+/* ---------- Banda marino: de dónde vengo ---------- */
+.band { background: var(--navy); color: var(--paper); padding-block: clamp(56px, 8vw, 104px); }
+.band .label { color: var(--blue-pale); border-top-color: var(--blue); }
+.band .prose { color: #E6DEDB; }
+.projects { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 clamp(20px, 3vw, 40px); margin-top: 14px; }
+.project { display: grid; gap: 10px; align-content: start; padding-top: 20px; border-top: 1px solid var(--navy-line); }
+.project h3 { font-size: 15px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--blue-pale); }
+.project .figure { font-family: var(--display); font-weight: 600; font-size: clamp(22px, 2.1vw, 27px); line-height: 1.2; font-variant-numeric: tabular-nums; }
+.project p { font-size: 16px; line-height: 1.5; color: #CFC6C3; }
+
+/* ---------- Lo que buscáis / lo que traigo ---------- */
+.match { display: grid; }
+.match-head, .match-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.55fr); gap: 8px clamp(20px, 4vw, 56px); }
+.match-head { font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft); padding-bottom: 12px; }
+.match-row { padding-block: 26px; border-top: 1px solid var(--line); }
+.match-row:last-child { border-bottom: 1px solid var(--line); }
+.match-row h3 { font-family: var(--display); font-weight: 600; font-size: 24px; line-height: 1.15; }
+.ask { font-size: 16px; line-height: 1.45; color: var(--ink-soft); margin-top: 8px; }
+.bring { max-width: 58ch; }
+.bring strong { font-weight: 700; }
+
+/* ---------- El ciclo ---------- */
+.cycle { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; counter-reset: paso; }
+.cycle li { counter-increment: paso; display: grid; gap: 6px; align-content: start; padding: 16px 16px 0 0; border-top: 2px solid var(--blue); }
+.cycle li::before {
+  content: "0" counter(paso);
+  font-family: var(--display); font-weight: 600; font-size: 34px; line-height: 1; color: var(--blue);
+  font-variant-numeric: tabular-nums;
+}
+.cycle li span { font-weight: 700; line-height: 1.3; }
+
+/* ---------- Las siete palabras ---------- */
+.traits { display: grid; }
+.traits div { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 4px 24px; padding-block: 16px; border-top: 1px solid var(--line); align-items: baseline; }
+.traits div:last-child { border-bottom: 1px solid var(--line); }
+.traits dt { font-family: var(--display); font-weight: 600; font-size: 23px; line-height: 1.2; }
+.traits dd { max-width: 56ch; }
+
+/* ---------- Lo que no domino ---------- */
+.honest { border: 2px solid var(--ink); border-radius: 26px; padding: clamp(24px, 4vw, 44px); display: grid; gap: 22px; background: var(--white); }
+.honest ul { display: grid; gap: 18px; }
+.honest li { display: grid; gap: 2px; max-width: 62ch; }
+.honest li strong { font-weight: 700; }
+
+/* ---------- Cierre ---------- */
+.close h2 { max-width: 18ch; font-size: clamp(34px, 6.2vw, 78px); line-height: 1.04; color: var(--white); }
+.close-below { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 28px clamp(32px, 6vw, 88px); padding-top: clamp(28px, 4vw, 48px); align-items: start; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--body); font-size: 14px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  text-decoration: none; cursor: pointer;
+  padding: 14px 24px; border-radius: 999px; border: 2px solid var(--navy);
+  background: var(--navy); color: var(--white);
+  transition: background-color .15s ease, color .15s ease;
+}
+.btn:hover { background: var(--blue-deep); border-color: var(--blue-deep); }
+.btn.ghost { background: transparent; color: var(--navy); }
+.btn.ghost:hover { background: var(--navy); color: var(--white); border-color: var(--navy); }
+.contact { display: grid; gap: 0; font-size: 17px; }
+.contact div { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 6px 16px; padding-block: 12px; border-top: 1px solid var(--line); }
+.contact div:last-child { border-bottom: 1px solid var(--line); }
+.contact dt { color: var(--ink-soft); font-size: 15px; }
+.contact dd { font-weight: 700; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; overflow-wrap: anywhere; }
+.contact .place { display: grid; gap: 2px; justify-items: end; text-align: right; }
+.contact .near { font-weight: 500; font-size: 15px; color: var(--ink-soft); }
+.copy { font-family: var(--body); font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--blue-deep); background: transparent; border: 1.5px solid var(--blue); border-radius: 999px; padding: 4px 12px; cursor: pointer; }
+.copy:hover { background: var(--blue-deep); border-color: var(--blue-deep); color: var(--white); }
+
+
+/* ---------- Estrecho ---------- */
+@media (max-width: 860px) {
+  .rail { grid-template-columns: minmax(0, 1fr); }
+  .label { justify-self: start; padding-right: 28px; }
+  .hero-below, .close-below { grid-template-columns: minmax(0, 1fr); }
+  .lead { max-width: none; }
+  .projects { grid-template-columns: minmax(0, 1fr); gap: 26px; }
+  .match-head { display: none; }
+  .match-row { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .cycle { grid-template-columns: minmax(0, 1fr); }
+  .cycle li { grid-template-columns: 56px minmax(0, 1fr); align-items: baseline; padding: 14px 0; border-top-width: 1px; }
+  .cycle li:last-child { border-bottom: 1px solid var(--blue); }
+  .traits div { grid-template-columns: minmax(0, 1fr); }
+  .contact .place { justify-items: start; text-align: left; }
+}
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .sprout { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .btn { transition: none; } }
+</style>
+
+<header class="wrap topbar">
+  <span>Daniel Montero</span>
+  <span>Para el equipo de Sheedo Studio</span>
+</header>
+
+<main>
+
+  <section class="wrap hero" aria-labelledby="hola">
+    <div class="sheet">
+      <div class="sheet-inner">
+        <h1 id="hola"><span>Hola, Sheedo.</span><span>Soy Daniel.</span></h1>
+      </div>
+      <svg class="sprout" viewBox="0 0 100 120" fill="none" aria-hidden="true">
+        <path d="M50 120V52" stroke="#F7F3F2" stroke-width="5" stroke-linecap="round"/>
+        <path d="M50 66C50 44 34 30 10 30c0 24 16 38 40 36Z" fill="#F7F3F2"/>
+        <path d="M50 50C50 26 66 10 92 10c0 26-16 42-42 40Z" fill="#F7F3F2"/>
+      </svg>
+    </div>
+    <div class="hero-below">
+      <p class="lead">Antes de la entrevista quería contaros qué puedo aportar al equipo de Marketing.</p>
+      <ul class="facts">
+        <li><span>Puesto</span><span>Marketing &amp; Content Specialist (Junior)</span></li>
+        <li><span>Formación</span><span>Grado Superior en Marketing y Publicidad<br>Máster en Diseño Gráfico &amp; Content Visual con IA (cursando)</span></li>
+        <li><span>Experiencia</span><span>2 años en marketing B2B</span></li>
+        <li><span>Inglés</span><span>B2</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="wrap rail" aria-labelledby="porque">
+    <p class="label">Por qué Sheedo</p>
+    <div class="body">
+      <h2 id="porque">Buscaba un cambio y encontré un producto que apetece contar</h2>
+      <div class="prose">
+        <p>Después de dos años en ferias B2B, y mientras sigo formándome con un máster en diseño gráfico y contenido visual con IA, quería un trabajo distinto al que tenía.</p>
+        <p>De vuestra oferta me quedé con dos cosas. Una es el producto. Un papel pensado para “usar y plantar” se entiende en una frase, y da gusto comunicar algo que está bien diseñado y que se puede tocar.</p>
+        <p>La otra es el equipo. Sois pocos, y eso significa pasar por todas las fases. Así he trabajado hasta ahora y así quiero seguir creciendo.</p>
+        <p>Hay además una coincidencia que me gusta. Parte de vuestro catálogo está pensada para eventos, que es justo el mundo del que vengo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="vengo">
+    <div class="wrap rail">
+      <p class="label">De dónde vengo</p>
+      <div class="body">
+        <h2 id="vengo">Dos años en ferias B2B, haciendo un poco de todo</h2>
+        <div class="prose">
+          <p>Entre 2024 y 2026 fui técnico de marketing y comunicación en SHOW2BE, una empresa que organiza eventos profesionales. Me ocupaba de la comunicación de cada feria de principio a fin: emails, diseño, foto, vídeo, redes y los informes que llegaban a dirección.</p>
+        </div>
+        <div class="projects">
+          <article class="project">
+            <h3>FIS</h3>
+            <p class="figure">2.500+ asistentes<br>140+ marcas</p>
+            <p>Franchise Innovation Summit. Estrategia de marketing y comunicación del evento, del email al podcast oficial.</p>
+          </article>
+          <article class="project">
+            <h3>SPORTCITIES</h3>
+            <p class="figure">3.500 visitantes<br>100+ expositores</p>
+            <p>Feria de infraestructuras deportivas. Campañas multicanal y el podcast “21 minutos con…”.</p>
+          </article>
+          <article class="project">
+            <h3>RehabiMAD</h3>
+            <p class="figure">Diseño, redes<br>y vídeo</p>
+            <p>Reforma y eficiencia energética en la Comunidad de Madrid. Materiales, redes y vídeo del evento, con una campaña para público familiar.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap rail" aria-labelledby="encaje">
+    <p class="label">El encaje</p>
+    <div class="body">
+      <h2 id="encaje">Lo que buscáis y lo que traigo</h2>
+      <p class="note">He repasado las áreas de la oferta una a una. Al lado de cada una pongo lo que ya he hecho, sin estirarlo.</p>
+      <div class="match">
+        <div class="match-head" aria-hidden="true"><span>Lo que buscáis</span><span>Lo que traigo</span></div>
+
+        <div class="match-row">
+          <div><h3>Producto y contenido web</h3><p class="ask">Contenidos de producto en WordPress, textos SEO y apoyo en captación B2B.</p></div>
+          <p class="bring">En Qualoom, mi primera empresa, <strong>construí parte de la web con WordPress</strong>. En SHOW2BE escribí artículos para dar contenido y posicionamiento a las webs de las ferias.</p>
+        </div>
+
+        <div class="match-row">
+          <div><h3>Contenidos y redes sociales</h3><p class="ask">Calendario, piezas para Instagram, YouTube y LinkedIn, y copies por canal.</p></div>
+          <p class="bring">He creado contenido para las redes de FIS, SPORTCITIES y RehabiMAD <strong>produciendo yo el material</strong>: foto, vídeo, diseño y copy. También he trabajado formato largo con los podcasts de las ferias.</p>
+        </div>
+
+        <div class="match-row">
+          <div><h3>Email marketing y CRM</h3><p class="ask">Newsletters, campañas de email y trabajo con CRM y automatización.</p></div>
+          <p class="bring">Es donde más horas tengo. <strong>Plantillas HTML hechas desde cero para Brevo y HubSpot</strong>, segmentación, planificación de reenvíos y optimización de apertura. Cada campaña terminaba en un informe de rendimiento.</p>
+        </div>
+
+        <div class="match-row">
+          <div><h3>Casos de éxito</h3><p class="ask">Convertir proyectos y clientes en historias que se puedan comunicar.</p></div>
+          <p class="bring">En cada feria mi trabajo era convertir lo que pasaba en piezas: fotos de ponencias y networking, vídeos, episodios de podcast. Un caso de éxito pide lo mismo: <strong>ir a buscar la historia, reunir el material y darle forma</strong>.</p>
+        </div>
+
+        <div class="match-row">
+          <div><h3>Campañas de marketing</h3><p class="ask">Contenidos, email, redes, piezas para paid y materiales para Ventas.</p></div>
+          <p class="bring"><strong>Campañas multicanal para tres eventos</strong>: email, paid media segmentado, redes y cartelería, tanto en digital como en impreso.</p>
+        </div>
+
+        <div class="match-row">
+          <div><h3>IA en el trabajo diario</h3><p class="ask">Investigar, generar, adaptar y automatizar con criterio.</p></div>
+          <p class="bring">Ya forma parte de cómo trabajo: <strong>prompt engineering, automatización y flujos con IA</strong>. En el máster la estoy llevando al contenido visual y en este caso, esta web la he dado forma con Claude ;)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap rail" aria-labelledby="ciclo">
+    <p class="label">Cómo trabajo</p>
+    <div class="body">
+      <h2 id="ciclo">Puedo llevar una pieza desde la idea hasta el dato</h2>
+      <p class="note">En un equipo pequeño ayuda que una misma persona entienda todos los pasos. Este es el recorrido que he hecho una y otra vez:</p>
+      <ol class="cycle">
+        <li><span>Parto de la idea y el objetivo</span></li>
+        <li><span>Escribo el copy</span></li>
+        <li><span>Diseño la pieza (gráfica, foto o vídeo)</span></li>
+        <li><span>La lanzo en email, redes o web</span></li>
+        <li><span>Mido los resultados</span></li>
+      </ol>
+      <p class="note">En Sheedo ya hay un equipo de Diseño. Con ellos puedo hablar el mismo idioma: llegar con un briefing claro, respetar sus tiempos y resolver por mi cuenta las piezas pequeñas del día a día.</p>
+    </div>
+  </section>
+
+  <section class="wrap rail" aria-labelledby="palabras">
+    <p class="label">Vuestra lista</p>
+    <div class="body">
+      <h2 id="palabras">Las siete palabras de vuestra oferta</h2>
+      <p class="note">Decís que buscáis una forma de trabajar más que una lista de herramientas. Esto es lo que puedo contar de cada palabra.</p>
+      <dl class="traits">
+        <div><dt>Curioso</dt><dd>Sigo estudiando con un máster, y buena parte de las herramientas que manejo las aprendí por mi cuenta.</dd></div>
+        <div><dt>Proactivo</dt><dd>Nadie me pidió esta página. Me pareció la mejor manera de enseñaros cómo trabajo.</dd></div>
+        <div><dt>Organizado</dt><dd>FIS, SPORTCITIES y RehabiMAD convivían en el mismo calendario, cada una con sus campañas y sus plazos.</dd></div>
+        <div><dt>Digital</dt><dd>Brevo, HubSpot, WordPress, la suite de Adobe, DaVinci Resolve y herramientas de IA.</dd></div>
+        <div><dt>Creativo</dt><dd>Diseñé gran parte del material gráfico de las ferias, digital e impreso, y sigo afinando el ojo con el máster.</dd></div>
+        <div><dt>Analítico</dt><dd>Medía apertura y rendimiento de cada envío y lo presentaba a dirección.</dd></div>
+        <div><dt>Resolutivo</dt><dd>Si hacía falta una foto, un vídeo o una plantilla de email, la sacaba yo. Durante los eventos, también en persona.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="wrap rail" aria-labelledby="aprender">
+    <p class="label">Con sinceridad</p>
+    <div class="body">
+      <div class="honest">
+        <h2 id="aprender">Lo que todavía no domino</h2>
+        <p class="note">Prefiero que lo sepáis por mí.</p>
+        <ul>
+          <li><strong>GA4 y Search Console.</strong><span>Es lo que menos controlo. Hasta ahora lo llevaba una agencia y yo supervisaba su trabajo. Me falta meter las manos.</span></li>
+          <li><strong>SEO.</strong><span>Mi experiencia es de contenido: artículos para alimentar las webs de las ferias. La parte más técnica la quiero aprender con vosotros.</span></li>
+        </ul>
+        <p>Vuestra oferta dice que no esperáis un experto en todo desde el primer día, y sí curiosidad e iniciativa. Soy bastante autodidacta, y eso sí puedo prometerlo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap close" aria-labelledby="cierre">
+    <div class="sheet">
+      <div class="sheet-inner">
+        <h2 id="cierre">Gracias por vuestro tiempo y por llegar hasta el final.</h2>
+      </div>
+    </div>
+    <div class="close-below">
+      <div class="prose">
+        <p>Las piezas reales de cada proyecto están en mi portfolio, y lo demás prefiero contároslo en persona.</p>
+        <div class="actions">
+          <a class="btn" href="https://daaniimontero.github.io/danielmontero-web-portfolio/" target="_blank" rel="noopener">Ver mi portfolio</a>
+          <a class="btn ghost" href="https://linkedin.com/in/daniel-montero-diaz/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <dl class="contact">
+        <div><dt>Email</dt><dd><span id="email">montydaniel03@gmail.com</span><button class="copy" id="copy-email" type="button">Copiar</button></dd></div>
+        <div><dt>Teléfono</dt><dd>+34 692 88 05 75</dd></div>
+        <div><dt>Ubicación</dt><dd class="place"><span>Arganzuela 28005, Madrid</span><span class="near">(a 13 min andando de vuestra oficina)</span></dd></div>
+      </dl>
+    </div>
+  </section>
+
+</main>
+
+
+<script>
+(function () {
+  // Copiar el email
+  var btn = document.getElementById('copy-email');
+  var email = document.getElementById('email');
+  btn.addEventListener('click', function () {
+    function selectIt() {
+      var r = document.createRange(); r.selectNodeContents(email);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = 'Seleccionado';
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(email.textContent).then(function () { btn.textContent = 'Copiado'; }, selectIt);
+    } else { selectIt(); }
+    setTimeout(function () { btn.textContent = 'Copiar'; }, 2200);
+  });
+})();
+</script>
+
+</body>
+</html>
